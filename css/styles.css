@@ -1,3 +1,11 @@
+.hero-col.left p {
+  color: var(--Light-Gray, #9e9da2);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
+}
 /* VARIABLES AND STYLES */
 :root {
   --white: rgba(255, 255, 255, 1);
@@ -45,6 +53,18 @@ p {
   text-decoration: none;
   text-transform: none;
 }
+/* HEADER */
+header {
+  padding-top: 80px;
+}
+.container {
+  width: 1280px;
+  margin: auto; /* place div in the center */
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
 h2 {
   font-size: 47px;
   font-family: Inter;
@@ -65,35 +85,7 @@ h3 {
   text-transform: uppercase;
   margin: 0;
 }
-.small-button {
-  font-size: 16px;
-  font-family: Inter;
-  font-weight: 700;
-  font-style: normal;
-  text-decoration: none;
-  text-transform: none;
-}
-.small {
-  font-size: 16px;
-  font-family: Inter;
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: none;
-  text-transform: none;
-}
 
-/* HEADER */
-header {
-  padding-top: 80px;
-}
-.container {
-  width: 1280px;
-  margin: auto; /* place div in the center */
-}
-.flex {
-  display: flex;
-  justify-content: space-between;
-}
 .menu ul {
   list-style: none;
   display: flex;
@@ -170,4 +162,144 @@ header {
 }
 .text-right .number {
   margin-left: auto;
+}
+
+/* LINK SECTION */
+/* HERO SECTION */
+.hero {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-col.left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hero-col.left h1 {
+  color: var(--Black, #000);
+
+  /* Big title */
+  font-family: Inter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 65.91px; /* 102.985% */
+}
+.hero-col.left h1 {
+  margin-bottom: 20px;
+}
+
+.hero-col.left p {
+  margin-top: 20px;
+}
+
+.hero-col.left p {
+  color: var(--Light-Gray, #9e9da2);
+
+  /* Description Hero */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px; /* 137.5% */
+}
+
+.download-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 32px; /* restore space between paragraph and buttons */
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  font-size: 18px;
+  font-family: Inter;
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+  background: var(--dark-gray);
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.download-btn.apple,
+.download-btn.google {
+  background: var(--dark-gray);
+}
+.download-btn:hover {
+  background: var(--gray);
+}
+
+.hero-col.right img {
+  width: 553px;
+  height: 582.813px;
+  flex-shrink: 0;
+}
+.link {
+  padding-top: 80px;
+}
+
+.link .container {
+  background-color: var(--green);
+  border-radius: 5px;
+  padding: 40px 40px 40px 40px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 40px;
+  align-items: center;
+}
+
+.link .container .description {
+  color: var(--white);
+}
+
+.link .container > div {
+  width: 100%;
+}
+
+.link form {
+  display: flex;
+  gap: 15px;
+}
+
+.link input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: Inter;
+}
+
+.link button {
+  padding: 12px 24px;
+  margin-right: 20px;
+  border-radius: 3px;
+  background: var(--Dark-gray, #272042);
+  color: var(--white);
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: Inter;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.link button:hover {
+  background-color: var(--green);
+  color: var(--white);
+  border: 1px solid var(--dark-gray);
 }
